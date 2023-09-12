@@ -113,28 +113,28 @@ class Sugar extends Product{
   }}
 
 
-//   class Oil extends Product{
-//   Oil ({ required price,required volume}):super(price,volume: volume);
+  class Oil extends Product{
+  Oil ({ required price,required volume}):super(price,volume: volume);
   
-//   @override
-//   void calculate() {
-//     if (volume!=null){
-//      totalPrice=price * volume!;
-//       print("10 liter oil price is $totalPrice Rs");
-//     }
-//   }
-// }
+  @override
+  void calculate() {
+    if (volume!=null){
+     totalPrice=price * volume!;
+      print("10 liter oil price is $totalPrice Rs");
+    }
+  }
+}
 
 
 void main() {
   final prctprice= Pen(price: 12, count: 3);
   final prctweight=Sugar(price: 35, weight: 23);
-  // final prctvolume=Oil(price: 105, volume: 50);
+  final prctvolume=Oil(price: 105, volume: 50);
 
   // prctprice.computePenname();
   prctprice.calculate();
   prctweight.calculate();
-  // prctvolume.calculate();
+  prctvolume.calculate();
 }
 
 
